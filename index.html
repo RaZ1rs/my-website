@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивная карта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map">
+    <div class="marker" style="top: 55%; left: 16%;" data-id="0"></div>
+    <div class="marker" style="top: 38%; left: 16%;" data-id="1"></div>
+    <div class="marker" style="top: 65%; left: 24%;" data-id="2"></div>
+    <div class="marker" style="top: 71%; left: 40%;" data-id="3"></div>
+    <div class="marker" style="top: 72%; left: 5%;" data-id="4"></div>
+    <div class="marker" style="top: 95%; left: 86%;" data-id="5"></div>
+  </div>
+
+  <div id="info-box" class="info-box"></div>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-image">
+        <img id="modal-img" src="" alt="Город">
+      </div>
+      <div class="modal-text">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <button onclick="closeModal(event)">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
